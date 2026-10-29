@@ -1,0 +1,7 @@
+{
+  "name": "cc1-poker-boumalk-awsim",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
