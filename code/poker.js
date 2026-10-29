@@ -7,6 +7,10 @@ function calculerScoreMain(main) {
   }
 
   for (const compte of comptesParValeur.values()) {
+    if (compte === 4) {
+      return 60;
+    }
+
     if (compte === 3) {
       return 30;
     }

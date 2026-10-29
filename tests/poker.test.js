@@ -61,3 +61,15 @@ test('une couleur rapporte 45 points', () => {
 
   assert.equal(calculerScoreMain(main), 45);
 });
+
+test('un carré rapporte 60 points', () => {
+  const main = [
+    { valeur: 2, enseigne: 'coeur' },
+    { valeur: 2, enseigne: 'carreau' },
+    { valeur: 2, enseigne: 'trèfle' },
+    { valeur: 2, enseigne: 'pique' },
+    { valeur: 3, enseigne: 'coeur' },
+  ];
+
+  assert.equal(calculerScoreMain(main), 60);
+});
