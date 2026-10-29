@@ -21,6 +21,12 @@ function calculerScoreMain(main) {
     return 40;
   }
 
+  const couleur = main.every(carte => carte.enseigne === main[0].enseigne);
+
+  if (couleur) {
+    return 45;
+  }
+
   return Math.max(...main.map(carte => carte.valeur));
 }
 
