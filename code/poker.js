@@ -12,7 +12,7 @@ function calculerScoreMain(main) {
     }
   }
 
-  return 0;
+  return Math.max(...main.map(carte => carte.valeur));
 }
 
 module.exports = { calculerScoreMain };
