@@ -25,3 +25,27 @@ test('pas de combinaison donc la main rapporte la valeur de sa carte la plus for
 
   assert.equal(calculerScoreMain(main), 13);
 });
+
+test('une suite rapporte 40 points', () => {
+  const main = [
+    { valeur: 5, couleur: 'coeur' },
+    { valeur: 6, couleur: 'carreau' },
+    { valeur: 7, couleur: 'trèfle' },
+    { valeur: 8, couleur: 'pique' },
+    { valeur: 9, couleur: 'coeur' },
+  ];
+
+  assert.equal(calculerScoreMain(main), 40);
+});
+
+test('as, 2, 3, 4 et 5 nest pas une suite', () => {
+  const main = [
+    { valeur: 14, couleur: 'coeur' },
+    { valeur: 2, couleur: 'carreau' },
+    { valeur: 3, couleur: 'trèfle' },
+    { valeur: 4, couleur: 'pique' },
+    { valeur: 5, couleur: 'coeur' },
+  ];
+
+  assert.equal(calculerScoreMain(main), 14);
+});

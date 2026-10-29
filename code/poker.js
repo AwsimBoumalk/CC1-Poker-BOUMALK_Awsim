@@ -12,6 +12,15 @@ function calculerScoreMain(main) {
     }
   }
 
+  const valeurs = main.map(carte => carte.valeur).sort((a, b) => a - b);
+  const suite = valeurs.every((valeur, index) => {
+    return index === 0 || valeur === valeurs[index - 1] + 1;
+  });
+
+  if (suite) {
+    return 40;
+  }
+
   return Math.max(...main.map(carte => carte.valeur));
 }
 
